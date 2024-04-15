@@ -637,4 +637,5 @@
     <string name="app_unrestricted_toast">L\'utilizzo della batteria dell\'app è già impostato su \"Senza restrizioni\"</string>
     <string name="music_singlar">Musica</string>
     <string name="audio_book_singular">Audiolibro</string>
+    <string name="reset_btn">Reimposta</string>
 </resources>

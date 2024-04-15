@@ -280,7 +280,7 @@
     <string name="backup_failed_error_format">Erreur de sauvegarde %s</string>
     <string name="search">Recherche</string>
     <string name="category_account">Comptes et Sécurité</string>
-    <string name="category_updates">Mises à jour et sauvegarde</string>
+    <string name="category_updates">Mises à jour et Sauvegarde</string>
     <string name="settings_info">Info</string>
     <string name="advanced_search">Recherche avancée</string>
     <string name="advanced_search_des">Vous donne les résultats de la recherche séparés par fournisseur</string>
@@ -419,7 +419,7 @@
     <string name="setup_extensions_subtext">Télécharger la liste de sites que vous voulez utiliser</string>
     <string name="plugins_downloaded" formatted="true">Téléchargé : %d</string>
     <string name="video_tracks">Pistes vidéo</string>
-    <string name="apply_on_restart">Appliqué au redémarrage</string>
+    <string name="apply_on_restart">Redémarrez l\'application pour voir les changements.</string>
     <string name="safe_mode_description">Toutes les extensions ont été désactivé à cause d\'un crash pour vous aider à trouver l\'extension causant le problème.</string>
     <string name="safe_mode_title">Mode sans échec activé</string>
     <string name="extension_size">Taille</string>
@@ -595,4 +595,17 @@
     <string name="test_extensions_summary">Ce test est destiné uniquement aux développeurs et ne vérifie ni n\'empêche le fonctionnement d\'aucune extension.</string>
     <string name="toast_copied">Copié !</string>
     <string name="repo_copy_label">Nom du dépôt et adresse internet</string>
+    <string name="favorite">Favori</string>
+    <string name="biometric_warning">Vos données CloudStream viennent d\'être sauvegardées. Bien que cette éventualité soit très faible, tous les appareils peuvent se comporter différemment. Dans le rare cas où l\'accès à l\'application est bloqué, effacez complètement les données de l\'application et restaurez à partir d\'une sauvegarde. Nous sommes sincèrement désolés pour les désagréments occasionnés par cette situation.</string>
+    <string name="battery_dialog_title">Désactiver l\'optimisation de la batterie</string>
+    <string name="app_info_intent_error">Impossible d\'ouvrir les infos sur l\'application CloudStream.</string>
+    <string name="biometric_authentication_title">Déverrouiller CloudStream</string>
+    <string name="music_singlar">Musique</string>
+    <string name="resume_remaining" formatted="true">%s
+\nrestants</string>
+    <string name="clipboard_permission_error">Erreur d\'accès au presse-papiers, veuillez réessayer.</string>
+    <string name="ok">OK</string>
+    <string name="biometric_unsupported">L\'authentification biométrique n\'est pas prise en charge sur cet appareil</string>
+    <string name="audio_book_singular">Livre Audio</string>
+    <string name="password_pin_authentication_title">Mot de passe/Code PIN</string>
 </resources>

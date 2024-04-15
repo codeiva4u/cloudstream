@@ -176,7 +176,7 @@
     <string name="subs_edge_type">Tipo de Borde</string>
     <string name="subs_subtitle_elevation">Elevación de Subtítulo</string>
     <string name="search_provider_text_providers">Buscar usando proveedores</string>
-    <string name="picture_in_picture_des">Continúa la reproducción en un reproductor miniatura encima de otras aplicaciones</string>
+    <string name="picture_in_picture_des">Continúa la reproducción en una imagen pequeña encima de otras aplicaciones</string>
     <string name="player_size_settings">Botón de cambio de tamaño del reproductor</string>
     <string name="player_size_settings_des">Eliminar bordes negros</string>
     <string name="subs_auto_select_language">Seleccionar idioma automáticamente</string>
@@ -232,7 +232,7 @@
     <string name="advanced_search_des">Mostrar los resultados de la búsqueda por proveedor</string>
     <string name="bug_report_settings_off">Solo envíar los datos si la App se cierra / falla inesperadamente</string>
     <string name="bug_report_settings_on">No enviar datos</string>
-    <string name="show_trailers_settings">Mostrar los trailers</string>
+    <string name="show_trailers_settings">Mostrar avances</string>
     <string name="kitsu_settings">Mostrar pósters de Kitsu</string>
     <string name="uprereleases_settings">Actualizar a las versiones preliminares</string>
     <string name="uprereleases_settings_des">Buscar actualizaciones preliminares (beta) en lugar de solo versiones completas (stable releases)</string>
@@ -339,7 +339,7 @@
     <string name="poster_ui_settings">Alternar elementos de la interfaz de usuario en el póster</string>
     <string name="no_update_found">No se encontró ninguna actualización</string>
     <string name="category_general">General</string>
-    <string name="primary_color_settings">Color primario</string>
+    <string name="primary_color_settings">Color principal</string>
     <string name="app_theme_settings">Tema de la aplicación</string>
     <string name="example_email">hola@mundo.com</string>
     <string name="login_format" formatted="true">%1$s %2$s</string>
@@ -449,13 +449,13 @@
     <string name="batch_download">Descarga por lotes</string>
     <string name="plugin_singular">plugin</string>
     <string name="plugin">plugins</string>
-    <string name="plugins_updated" formatted="true">Actualizados %d plugins</string>
+    <string name="plugins_updated" formatted="true">%d plugins actualizados</string>
     <string name="view_public_repositories_button">Ver repositorios de la comunidad</string>
     <string name="view_public_repositories_button_short">Lista pública</string>
     <string name="tracks">Pistas</string>
     <string name="audio_tracks">Pistas de audio</string>
     <string name="video_tracks">Pistas de video</string>
-    <string name="safe_mode_title">Modo seguro ON</string>
+    <string name="safe_mode_title">Modo seguro activado</string>
     <string name="safe_mode_crash_info">Ver información de fallos</string>
     <string name="extension_rating" formatted="true">Puntaje:%s</string>
     <string name="extension_version">Versión</string>
@@ -483,7 +483,7 @@
     <string name="yes">Si</string>
     <string name="delayed_update_notice">La aplicación se actualizará al salir</string>
     <string name="update_started">Actualización iniciada</string>
-    <string name="plugin_downloaded">Complemento descargado</string>
+    <string name="plugin_downloaded">Plugin descargado</string>
     <string name="action_remove_from_watched">Quitar de visto</string>
     <string name="sort_by">Ordenar por</string>
     <string name="sort">Ordenar</string>
@@ -512,7 +512,7 @@
     <string name="test_log">Registro</string>
     <string name="start">Empezar</string>
     <string name="test_passed">Aprobado</string>
-    <string name="category_provider_test">Prueba del proveedor</string>
+    <string name="category_provider_test">Verificar al proveedor</string>
     <string name="restart">Reiniciar</string>
     <string name="subscription_list_name">Suscrito</string>
     <string name="subscription_new">Suscrito a %s</string>
@@ -545,7 +545,7 @@
     <string name="unable_to_inflate">La interfaz de usuario no se ha podido crear correctamente, se trata de un GRAN BUG y debe ser reportado inmediatamente %s</string>
     <string name="automatic_plugin_download_mode_title">Seleccionar modo para filtrar los plugins descargados</string>
     <string name="disable">Deshabilitar</string>
-    <string name="no_plugins_found_error">No se encontraron complementos en el repositorio</string>
+    <string name="no_plugins_found_error">No se encontraron plugins en el repositorio</string>
     <string name="no_repository_found_error">Repositorio no encontrado, comprueba la URL y prueba la VPN</string>
     <string name="already_voted">Ya has votado</string>
     <string name="backup_frequency">Frecuencia de la copia de seguridad</string>
@@ -617,4 +617,5 @@
     <string name="custom_media_singluar">Media</string>
     <string name="audio_book_singular">Audiolibro</string>
     <string name="battery_dialog_message">Para garantizar descargas y notificaciones ininterrumpidas para programas de televisión suscritos, CloudStream necesita permiso para ejecutarse en segundo plano. Al presionar OK, se le dirigirá a información de la aplicación. Allí, desplácese hasta Uso de la batería de la aplicación y establezca el uso de la batería en Sin restricciones. Tenga en cuenta que este permiso no significa que CS3 agotará su batería. Solo funcionará en segundo plano cuando sea necesario, como cuando reciba notificaciones o descargue videos de extensiones oficiales. Si decide cancelar, puede ajustar esta configuración más adelante en los ajustes generales.</string>
+    <string name="reset_btn">Reset</string>
 </resources>
