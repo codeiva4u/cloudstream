@@ -130,6 +130,10 @@ class CS3IPlayer : IPlayer {
     val imageGenerator = IPreviewGenerator.new()
 
     private val seekActionTime = 30000L
+    private val isMediaSeekable
+        get() = exoPlayer?.let {
+            it.isCommandAvailable(Player.COMMAND_GET_CURRENT_MEDIA_ITEM) && it.isCurrentMediaItemSeekable
+        } ?: false
 
     private var ignoreSSL: Boolean = true
     private var playBackSpeed: Float = 1.0f
@@ -840,10 +844,13 @@ class CS3IPlayer : IPlayer {
                             ).build()
                     )
 
+            // Because "Java rules" the media3 team hates to do open classes so we have to copy paste the entire thing to add a custom extractor
+            // This includes the updated MKV extractor that enabled seeking in formats where the seek information is at the back of the file
+            val extractorFactor = UpdatedDefaultExtractorsFactory()
 
             val factory =
-                if (cacheFactory == null) DefaultMediaSourceFactory(context)
-                else DefaultMediaSourceFactory(cacheFactory)
+                if (cacheFactory == null) DefaultMediaSourceFactory(context, extractorFactor)
+                else DefaultMediaSourceFactory(cacheFactory, extractorFactor)
 
             // If there is only one item then treat it as normal, if multiple: concatenate the items.
             val videoMediaSource = if (mediaItemSlices.size == 1) {
@@ -986,13 +993,21 @@ class CS3IPlayer : IPlayer {
     }
 
     override fun seekTo(time: Long, source: PlayerEventSource) {
-        updatedTime(time, source)
-        exoPlayer?.seekTo(time)
+        if (isMediaSeekable) {
+            updatedTime(time, source)
+            exoPlayer?.seekTo(time)
+        } else {
+            Log.i(TAG, "Media is not seekable, we can not seek to $time")
+        }
     }
 
     private fun ExoPlayer.seekTime(time: Long, source: PlayerEventSource) {
-        updatedTime(currentPosition + time, source)
-        seekTo(currentPosition + time)
+        if (isMediaSeekable) {
+            updatedTime(currentPosition + time, source)
+            seekTo(currentPosition + time)
+        } else {
+            Log.i(TAG, "Media is not seekable, we can not seek to $time")
+        }
     }
 
     override fun handleEvent(event: CSPlayerEvent, source: PlayerEventSource) {
