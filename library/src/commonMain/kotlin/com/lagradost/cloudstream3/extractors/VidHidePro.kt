@@ -10,6 +10,11 @@ class VidHidePro1 : VidHidePro() {
     override var mainUrl = "https://filelions.live"
 }
 
+class Dhcplay: VidHidePro() {
+    override var name = "DHC Play"
+    override var mainUrl = "https://dhcplay.com"
+}
+
 class VidHidePro2 : VidHidePro() {
     override var mainUrl = "https://filelions.online"
 }
@@ -57,8 +62,6 @@ open class VidHidePro : ExtractorApi() {
         callback: (ExtractorLink) -> Unit
     ) {
         val headers = mapOf(
-            "Accept" to "*/*",
-            "Connection" to "keep-alive",
             "Sec-Fetch-Dest" to "empty",
             "Sec-Fetch-Mode" to "cors",
             "Sec-Fetch-Site" to "cross-site",
@@ -68,7 +71,11 @@ open class VidHidePro : ExtractorApi() {
         
         val response = app.get(getEmbedUrl(url), referer = referer)
         val script = if (!getPacked(response.text).isNullOrEmpty()) {
-            getAndUnpack(response.text)
+            var result = getAndUnpack(response.text)
+            if(result.contains("var links")){
+                result = result.substringAfter("var links")
+            }
+            result
         } else {
             response.document.selectFirst("script:containsData(sources:)")?.data()
         } ?: return

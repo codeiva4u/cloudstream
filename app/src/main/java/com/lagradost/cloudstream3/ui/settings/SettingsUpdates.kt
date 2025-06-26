@@ -65,6 +65,7 @@ class SettingsUpdates : PreferenceFragmentCompat() {
         }
     }
 
+    @Suppress("DEPRECATION_ERROR")
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         hideKeyboard()
         setPreferencesFromResource(R.xml.settings_updates, rootKey)
@@ -105,7 +106,7 @@ class SettingsUpdates : PreferenceFragmentCompat() {
             activity?.restorePrompt()
             return@setOnPreferenceClickListener true
         }
-        getPref(R.string.backup_path_key)?.hideOn(TV or EMULATOR)?.setOnPreferenceClickListener {
+        getPref(R.string.backup_path_key)?.hideOn(EMULATOR)?.setOnPreferenceClickListener {
             val dirs = getBackupDirsForDisplay()
             val currentDir =
                 settingsManager.getString(getString(R.string.backup_dir_key), null)
@@ -256,7 +257,7 @@ class SettingsUpdates : PreferenceFragmentCompat() {
 
         getPref(R.string.manual_update_plugins_key)?.setOnPreferenceClickListener {
             ioSafe {
-                PluginManager._DO_NOT_CALL_FROM_A_PLUGIN_manuallyReloadAndUpdatePlugins(activity ?: return@ioSafe)
+                PluginManager.___DO_NOT_CALL_FROM_A_PLUGIN_manuallyReloadAndUpdatePlugins(activity ?: return@ioSafe)
             }
             return@setOnPreferenceClickListener true // Return true for the listener
         }

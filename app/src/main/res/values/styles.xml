@@ -152,8 +152,8 @@
     <style name="RatingButton" parent="@style/SearchBox">
         <item name="android:minWidth">40dp</item>
         <item name="android:background">@drawable/rating_bg_color</item>
-        <item name="drawableTint">@color/ratingColor</item>
-        <item name="android:textColor">@color/ratingColor</item>
+        <item name="drawableTint">?attr/colorOnPrimary</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
         <item name="drawableStartCompat">@drawable/ic_baseline_star_24</item>
     </style>
 
@@ -531,6 +531,14 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="DialogHalfFullscreen" parent="AlertDialogCustom">
+        <item name="android:windowEnterAnimation">@anim/enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/exit_anim</item>
+
+        <item name="android:windowMinWidthMajor">45%</item> <!-- 65% -->
+        <item name="android:windowMinWidthMinor">95%</item> <!-- 95% -->
     </style>
 
     <style name="AlertDialogCustomBlack" parent="Theme.AppCompat.Dialog.Alert">
